@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  li {
+    list-style: none;
+  
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+
+  }
+  .header {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: black;
+  }
+ 
+  .header-line {
+    background: #fff;
+    width: 1px;
+    height: 110px;
+    margin: -40px;
+  }
+  
+  .navbar > ul {
+    display: flex;
+    padding-right: 50px;
+  }
+  .navbar > ul > li > a {
+    padding-left: 50px;
+  }
+  .logo {
+   color: #fff;
+   
+  }
+  h2 > span {
+    color: orangered;
+    font-size: 30px;
+  }
+  .active > a {
+    color: orangered;
+
+  }
+  .active > a:hover{
+    color: #fff;
+
+  }
+  .navbar > ul > li > a:hover {
+    color: orangered;
+  }
+  .active > a,
+.nav > p {
+  color: orangered;
+}
+
+
+/* header ends  */
+
+
+ 
+/* menus  */
+
+  .first-section {
+text-align: center;
+padding: 20px;
+  }
+.first-section>h2 {
+  padding: 30px;
+  font-size: 40px;
+  font-weight: 900;
+}
+.first-section>h5 {
+  font-style: italic;
+  font-size: 15px;
+  color: orangered;
+}
+  
+ 
+  .second-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 100px;
+        gap: 20px;
+  
+  }
+  
+  .menus {
+    box-shadow: 0px 0 15px rgb(0 0 0 / 10%);
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+  }
+.image>img, .menus>h5, .menus>p{
+    place-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+  .image>img{
+    height: 250px;
+    width: 250px;
+border-radius: 50%;
+  }
+  .price {
+position: absolute;
+border-radius: 50%;
+background-color:orangered ;
+padding: 10px;
+margin-top: -70px;
+left: 195px;
+
+  }
+  .menus>h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    text-transform: capitalize;
+    transition: all 0.2s ease-out 0s;
+  }
+  .menus>p {
+    font-size: 20px;
+    color: rgb(148, 129, 126);
+    margin-bottom: 34px;
+    transition: all 0.2s ease-out 0s;
+
+  }
+.menus>a {
+    margin:3px 35% ;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: orangered;
+    text-decoration: none;
+    border-bottom: 3px solid orangered;
+
+}
+  .icons {
+    display: flex;
+     /* align-items: center;
+    justify-content: center;  */
+    padding-top: 40px;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+   
+  }
+  .icon>img {
+    height: 20px;
+    cursor: pointer;
+  }
+  .arrows {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+  }
+
+  .arrow>img {
+    height: 40px;
+    cursor: pointer;
+  }
+
+  /* menus ends  */
+
+
+  /* booking  */
+
+  .book-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    place-content: center;
+    padding: 20px;
+
+  }
+  .book-us>h1 {
+    padding: 30px;
+    font-size: 40px;
+    font-weight: 900;
+    color: orangered;
+
+  }
+  .book-us>h5 {
+    font-style: italic;
+    font-size: 15px;
+    padding-bottom: 20px;
+  }
+  form {
+    padding: 30px;
+  }
+  input, textarea {
+    width: 100%;
+    border: none;
+    text-transform: capitalize;
+    border-width: 1px;
+    border-style: solid;
+    border-color: orangered;
+    padding: 10px 30px 10px 25px;
+    border-radius: 25px;
+    outline: none;
+  }
+  form>button {
+    border: none;
+    background-color: orangered;
+    color: black;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+  form>button>a {
+    color: #000;
+  }
+  /* booking ends  */
+
+  /* footer  */
+  footer {
+    background-color: #000;
+    padding: 60px;
+    margin: 80px 0 0 0;
+    color: #fff;
+  
+  }
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-media>h3 {
+  padding-bottom: 40px;
+
+  }
+  .social-links {
+    display: flex;
+    gap: 30px;
+  }
+  .each-social>a>img {
+    height: 35px;
+  }
+  .each-link>a:hover {
+    color: orangered;
+  }
+  .impotant-links {
+    line-height: 2.0;
+  }
+  .impotant-links>h3 {
+    padding-bottom: 20px;
+
+  }
+  .our-address>h3 {
+    padding-bottom: 40px;
+  
+  }
+  .our-address > p  {
+    padding-bottom: 40px;
+
+  }
+  .design-by {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 5px;
+  }
+  .design-by a > span {
+    color: orangered;
+  }
+  .design-by a > span:hover {
+    color: #fff;
+  }
+  
+  
+  /* footer ends  */
+  

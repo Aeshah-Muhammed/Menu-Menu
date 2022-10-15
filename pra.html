@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* text-align: center; */
+            /* overflow: hidden; */
+            text-align: center;
+        }
+         img {
+      position: absolute;
+      left: 400px;
+      height: 100vh;
+     }
+    </style>
+</head>
+<body>
+    <div id="scroll-image">
+
+        <img src="Assets/Images/pexels-ella-olsson-1640777.jpg" alt="" class="scroll"/>
+  
+        <img src="Assets/Images/pexels-foodie-factor-566566.jpg" alt="" class="scroll"/>
+       
+
+    <img src="Assets/Images/pexels-lisa-fotios-1279330.jpg" alt="" class="scroll"/>
+
+        <img src="Assets/Images/pexels-pixabay-255501.jpg" alt="" class="scroll"/>
+</div>
+<script>
+  startImageTransition();
+  function startImageTransition() {
+     var images = document.getElementsByClassName("scroll"); 
+     for (var i = 0; i < images.length; ++i) {
+      images[i].style.opacity = 1;
+     }
+   var top = 1;
+   var cur = images.length - 1;
+   setInterval (changeImage, 1000);
+   async function changeImage() {
+      var nextImage = (1+ cur) % images.length;
+      images[cur].style.zIndex = top + 1;
+      images[nextImage].style.zIndex = top;
+      await trasition();
+      images [cur].style.zIndex = top + 1;
+      top = top + 1;
+      images[cur].style.opacity = 1;
+      cur = nextImage;
+   }
+   function trasition() {
+      return new promise(function(resolve, reject) {
+          var del = 0.01;
+          var id = setInterval(changeOpacity, 10);
+          function changeOpacity() {
+              images[cur].style.opacity -=del;
+              if (images[cur].style.opacity<= 0) {
+                  clearInterval(id);
+                  resolve();
+              }
+          }
+      })
+   }
+  }
+</script>
+</body>
+</html>
