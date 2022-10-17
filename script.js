@@ -1,3 +1,6 @@
+
+// scroll
+
 // let height = 0
 // const scrollIcon = document.querySelector(".scroll-icon")
 
@@ -103,8 +106,14 @@
 
 // index 
 
-// side bar 
 
+
+
+
+  
+// scroll ends 
+
+// sideBar
 const bar = document.querySelector(".bar");
 const cancel = document.querySelector(".cancel");
 const sideBar = document.querySelector(".side-solid");
@@ -120,6 +129,8 @@ function closekick() {
   bar.style.display = 'block'
   sideBar.style.display = 'none'
 }
+// sideBar ends 
+
 
 
 // wallpaper 
@@ -128,7 +139,7 @@ const backgroundImages = [
   "Assets/Images/pexels-lisa-fotios-1279330.jpg",
   "Assets/Images/pexels-ella-olsson-1640777.jpg",
   "Assets/Images/pexels-rajesh-tp-1624487.jpg",
-  "Assets/Images/pexels-lukas-616401.jpg",
+  "Assets/Images/pexels-lukas-616401.jpg"
  
   
 ];
@@ -146,186 +157,352 @@ document.querySelector(".wallpaper").style.backgroundImage = 'url(' + background
 
 setInterval( backgroundChanger, 4000);
 
+// wallpaper ends 
 
 
-// menus 
+// first page menu 
 
 
-const menus = [
-    {
-        id : 1,
-        image : "Assets/Images/001/IMG_3304.JPG",
-        price : 1200 ,
-    names :"Jollof Rice",
-    desc : "with beef and plantain",
-    link :"Order Now",
-    } ,
-    {
-        id : 2,
-        image :"Assets/Images/001/IMG_3313.JPG",
-        price : 1200 ,
-    names :"Jollof Rice",
-    desc : "with fish and plantain",
-    link :"Order Now",
-    },
-    {
-        id : 3,
-        image :"Assets/Images/001/",
-        price : 600 ,
-    names :"Yam and Beans",
-    desc : "with fish and plantain",
-    link :"Order Now",
-    },
-    {
-        id : 4,
-        image : "Assets/Images/001/IMG_3307.JPG",
-        price : 1300 ,
-    names :"Ewa Agoyin",
-    desc : "with fish,ponmo and plantain",
-    link :"Order Now",
-    },
-    {
-        id : 5,
-        image :"Assets/Images/001/IMG_3308.JPG",
-        price : 500 ,
-    names :"Chin-Chin",
-    desc : "Price varries with size.",
-    link :"Order Now",
-    },
-    {
-        id : 6,
-        image :"Assets/Images/001/IMG_3314.JPG",
-        price : 200 ,
-    names :"Coleslaw",
-    desc : "Coleslaw",
-    link :"Order Now",
-    },
-    
+
+const firstPageMenu = [
+{
+  id : 1,
+  p : "Jollof Rice",
+  span : " with beef and plantain..............................................................<strong> &#8358;1200</strong>",
+
+  type : ['breakfast', 'launch' ] 
+},
+{
+  id : 2,
+  p : "Jollof Rice",
+  span : " with fish and plantain................................................................<strong> &#8358;1200</strong>",
+  type : ['breakfast', 'launch' ] 
+},
+{
+  id : 3,
+  p : "Yam and beans",
+  span : "with fish and plantain ..............................................................<strong>&#8358;600</strong>",
+  type : ['breakfast', 'launch' ] 
+},
+{
+  id : 4,
+  p : "Ewa Agoyin",
+  span : "with fish,ponmo and plantain...................................................<strong>&#8358;1,300</strong>",
+  type : ['launch' ] 
+},
+{
+  id : 5,
+  p : "Chin-Chin",
+  span : "Price varries with size........................................................<strong>&#8358;200/&#8358;500</strong>",
+  type : ['breakfast', 'launch', 'brunch' ] 
+},
+{
+  id : 6,
+  p : "Coleslaw",
+  span : "Just............................................................................................ <strong>&#8358;200</strong>",
+  type : ['breakfast', 'launch', 'brunch', 'coleslaw' ] 
+},
+{
+  id : 7,
+  p : "Soft drinks of your choice",
+  span : "Price ranges with choice.....................................................<strong>&#8358;200 - &#8358;500</strong>",
+  type : ['breakfast', 'launch', 'brunch', 'drinks' ] 
+
+},
+
+
+
 ];
-const img = document.querySelector("#img");
-const price = document.querySelector(".price");
-const names = document.getElementById("names");
-const desc = document.getElementById("desc");
-
-const img2 = document.querySelector("#img2");
-const price2 = document.querySelector("#price2");
-const names2 = document.getElementById("names2");
-const desc2 = document.getElementById("desc2");
-
-const img3 = document.querySelector("#img3");
-const price3 = document.querySelector("#price3");
-const names3 = document.getElementById("names3");
-const desc3 = document.getElementById("desc3");
-
-const link = document.getElementById("link");
-const prevBtn = document.getElementById("prev-btn");
-const nextBtn = document.getElementById("next-btn");
-const prevArrow = document.getElementById("prev-arrow");
-const nextArrow = document.getElementById("next-arrow");
-
-let currentItem = 0;
-let currentItem2 = 1;
-let currentItem3 = 2;
-
-window.addEventListener("DOMCOntentLoaded", function() {
-    showPerson();
-});
 
 
-function showPerson() {
-    const item = menus[currentItem];
-    const item2 = menus[currentItem2];
-    const item3 = menus[currentItem3];
+const menuWrap = document.querySelector(".menu-wrap");
 
-    img.src = item.image;
-    names.textContent = item.names;
-    desc.textContent = item.desc;
-    link.textContent = item.link;
-    price.textContent = item.price;
 
-    img2.src = item2.image;
-    names2.textContent = item2.names;
-    desc2.textContent = item2.desc;
-    price2.textContent = item2.price;
+// const allMenu = document.getElementById("allmenu");
+const breakfast = document.getElementById("breakfast");
+const brunch = document.getElementById("brunch");
+const launch = document.getElementById("launch");
+const  drinks = document.getElementById("drinks");
+const coleslaw = document.getElementById("coleslaw");
 
-    img3.src = item3.image;
-    names3.textContent = item3.names;
-    desc3.textContent = item3.desc;
-    price3.textContent = item3.price;
 
+const maplist =  firstPageMenu.map((items,id) =>
+
+`   <div class="each-menu">
+<p>${items.p}</p>
+<span
+  >${items.span}</span
+>
+</div>`
+
+)
+
+// const oo = [{
+//   id : 1,
+//   p : "Jollof Rice",
+//   span : " with beef and plantain..............................................................<strong> &#8358;1200</strong>",
+
+//   category : ['breakfast', 2] 
+// },
+// ]
+
+
+
+maplist.forEach(function(i){
+  const workLiTag = document.createElement("div");
+   workLiTag.innerHTML = i;
+   document.querySelector(".menu-wrap").appendChild(workLiTag);
+})
+// allMenu.addEventListener('click', allMenufilter)
+breakfast.addEventListener('click', breakfastfilter)
+brunch.addEventListener('click', brunchfilter)
+launch.addEventListener('click', launchfilter)
+drinks.addEventListener('click', drinksfilter)
+coleslaw.addEventListener('click', coleslawfilter)
+
+// function allMenufilter() {
+
+//   document.querySelector(".menu-wrap").innerHTML = '';
+
+//   const maplist = breakfast.map((items, id) =>
+
+
+
+//   `    <div class="each-menu">
+//   <p>${items.p}</p>
+//   <span
+//     >${items.span}</span
+//   >
+//   </div>`
+//   )
+
+
+//   maplist.forEach(function(i){
+//     const workLiTag = document.createElement("div");
+//     workLiTag.innerHTML = i;
+//     document.querySelector(".menu-wrap").appendChild(workLiTag);
+//     })
+// }
+function breakfastfilter() {
+
+  document.querySelector(".menu-wrap").innerHTML = '';
+
+  // const filterlist = firstPageMenu.filter((items, id) => items.category.includes('breakfast'))
+
+
+  const filterlist = firstPageMenu.filter((foods) =>
+  foods.type.includes('breakfast')
+)
+  
+
+  const filterlisthtml = filterlist.map((items, id) => 
+
+  `    <div class="each-menu">
+  <p>${items.p}</p>
+  <span
+    >${items.span}</span
+  >
+  </div>`
+
+  )
+
+  filterlisthtml.forEach(function(i){
+    const workLiTag = document.createElement("div");
+    workLiTag.innerHTML = i;
+    document.querySelector(".menu-wrap").appendChild(workLiTag);
+    })
+    
 }
 
-nextBtn.addEventListener("click", nextAction);
+function brunchfilter() {
 
-function nextAction(){
-    currentItem++;
-    currentItem2++;
-    currentItem3++;
+  document.querySelector(".menu-wrap").innerHTML = '';
+
+  const filterlist = firstPageMenu.filter((foods) =>
+  foods.type.includes('brunch')
+  )
   
-    if (currentItem > menus.length - 1)  {
-      currentItem = 0;
-    }
-    if (currentItem2 > menus.length - 2)  {
-      currentItem2 = 1;
-    }
-    if (currentItem3 > menus.length - 3)  {
-        currentItem3 = 2;
-      }
 
+  const filterlisthtml = filterlist.map((items, id) => 
+
+  `    <div class="each-menu">
+  <p>${items.p}</p>
+  <span
+    >${items.span}</span
+  >
+  </div>`
+
+  )
+
+  filterlisthtml.forEach(function(i){
+    const workLiTag = document.createElement("div");
+    workLiTag.innerHTML = i;
+    document.querySelector(".menu-wrap").appendChild(workLiTag);
+    })
+    
+}
+function launchfilter() {
+
+  document.querySelector(".menu-wrap").innerHTML = '';
+
+  const filterlist = firstPageMenu.filter((foods) =>
+  foods.type.includes('launch')
+
+  )
+
+  const filterlisthtml = filterlist.map((items, id) => 
+
+  `    <div class="each-menu">
+  <p>${items.p}</p>
+  <span
+    >${items.span}</span
+  >
+  </div>`
+
+  )
+
+  filterlisthtml.forEach(function(i){
+    const workLiTag = document.createElement("div");
+    workLiTag.innerHTML = i;
+    document.querySelector(".menu-wrap").appendChild(workLiTag);
+    })
+    
+}
+function drinksfilter() {
+
+  document.querySelector(".menu-wrap").innerHTML = '';
+
+  const filterlist = firstPageMenu.filter((foods) =>
+  foods.type.includes('drinks'))
 
   
-    showPerson();
-  }
 
-  prevBtn.addEventListener("click", function(){
-    currentItem--;
-  if (currentItem < 0) {
-    currentItem = menus.length - 1;
-  } 
-  showPerson();
-});
+  const filterlisthtml = filterlist.map((items, id) => 
 
-nextArrow.addEventListener("click", arrowAction);
+  `    <div class="each-menu">
+  <p>${items.p}</p>
+  <span
+    >${items.span}</span
+  >
+  </div>`
 
-function arrowAction(){
-    currentItem++;
-    currentItem2++;
-    currentItem3++;
-  
-    if (currentItem > menus.length - 1)  {
-      currentItem = 0;
-    }
-    if (currentItem2 > menus.length - 2)  {
-      currentItem2 = 1;
-    }
-    if (currentItem3 > menus.length - 3)  {
-        currentItem3 = 2;
-      }
+  )
 
+  filterlisthtml.forEach(function(i){
+    const workLiTag = document.createElement("div");
+    workLiTag.innerHTML = i;
+    document.querySelector(".menu-wrap").appendChild(workLiTag);
+    })
+    
+}
+function coleslawfilter() {
+
+  document.querySelector(".menu-wrap").innerHTML = '';
+
+  const filterlist = firstPageMenu.filter((foods) =>
+  foods.type.includes('coleslaw'))
 
   
-    showPerson();
-  }
-  prevArrow.addEventListener("click", function(){
-    currentItem--;
-    currentItem2--;
-    currentItem3--;
-  if (currentItem < 0) {
-    currentItem = menus.length - 1;
-  } 
-  if (currentItem2 < 0) {
-    currentItem2 = menus.length - 2;
-  }   if (currentItem3 < 0) {
-    currentItem3 = menus.length - 3;
-  } 
-  showPerson();
-});
+
+  const filterlisthtml = filterlist.map((items, id) => 
+
+  `    <div class="each-menu">
+  <p>${items.p}</p>
+  <span
+    >${items.span}</span
+  >
+  </div>`
+
+  )
+
+  filterlisthtml.forEach(function(i){
+    const workLiTag = document.createElement("div");
+    workLiTag.innerHTML = i;
+    document.querySelector(".menu-wrap").appendChild(workLiTag);
+    })
+    
+}
+
+breakfast.addEventListener('click',
+function() {
+
+  breakfast.style.backgroundColor = 'orangered'
+  breakfast.style.color = 'white'
+  brunch.style.backgroundColor = 'white'
+  coleslaw.style.backgroundColor = 'white'
+  launch.style.backgroundColor = 'white'
+ drinks.style.backgroundColor = 'white'
+ brunch.style.color = 'black'
+ coleslaw.style.color = 'black'
+  launch.style.color = 'black'
+ drinks.style.color = 'black'
+
+ 
+})
+brunch.addEventListener('click',
+function() {
+  breakfast.style.backgroundColor = 'white'
+  brunch.style.backgroundColor = 'orangered'
+  brunch.style.color = 'white'
+  launch.style.backgroundColor = 'white'
+ drinks.style.backgroundColor = 'white'
+ coleslaw.style.backgroundColor = 'white'
+ breakfast.style.color = 'black'
+ coleslaw.style.color = 'black'
+ launch.style.color = 'black'
+drinks.style.color = 'black'
+})
+launch.addEventListener('click',
+function() {
+
+  launch.style.backgroundColor = 'orangered'
+  launch.style.color = 'white'
+
+  breakfast.style.backgroundColor = 'white'
+  brunch.style.backgroundColor = 'white'
+  coleslaw.style.backgroundColor = 'white'
+ drinks.style.backgroundColor = 'white'
+ breakfast.style.color = 'black'
+ coleslaw.style.color = 'black'
+ brunch.style.color = 'black'
+drinks.style.color = 'black'
+})
+coleslaw.addEventListener('click',
+function() {
+
+  coleslaw.style.backgroundColor = 'orangered'
+  coleslaw.style.color = 'white'
+  brunch.style.backgroundColor = 'white'
+  breakfast.style.backgroundColor = 'white'
+  launch.style.backgroundColor = 'white'
+ drinks.style.backgroundColor = 'white'
+ breakfast.style.color = 'black'
+ brunch.style.color = 'black'
+ launch.style.color = 'black'
+drinks.style.color = 'black'
+})
+drinks.addEventListener('click',
+function() {
+
+  drinks.style.backgroundColor = 'orangered'
+  drinks.style.color = 'white'
+  breakfast.style.backgroundColor = 'white'
+  brunch.style.backgroundColor = 'white'
+  launch.style.backgroundColor = 'white'
+  coleslaw.style.backgroundColor = 'white'
+  breakfast.style.color = 'black'
+  coleslaw.style.color = 'black'
+  launch.style.color = 'black'
+ brunch.style.color = 'black'
+ 
+})
+
+// style
+
+
+// first page menu ends 
 
 
 
-
-setInterval(() => {
-    nextAction()
-}, 3000);
 
 
