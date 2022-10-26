@@ -228,6 +228,13 @@ textarea {
   border-radius: 25px;
   outline: none;
 }
+.notification {
+  margin: 20px;
+  font-size: 13px;
+  color: orangered;
+display: none;
+
+}
 form > button {
   border: none;
   background-color: orangered;
@@ -239,10 +246,11 @@ form > button {
   font-size: 15px;
   font-weight: 700;
   margin-top: 10px;
+  cursor: pointer;
 }
-form > button > a {
+/* form > button > a {
   color: #000;
-}
+} */
 
 /* booking ends  */
 

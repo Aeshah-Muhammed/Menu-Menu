@@ -24,7 +24,7 @@ function closekick() {
 const menus = [
     {
         id : 1,
-        image : "Assets/Images/001/IMG_3304.JPG",
+        image :"Assets/Images/001/jollof beef.jpg",
         price : 1200 ,
     names :"Jollof Rice",
     desc : "with beef and plantain",
@@ -32,7 +32,7 @@ const menus = [
     } ,
     {
         id : 2,
-        image :"Assets/Images/001/IMG_3313.JPG",
+        image :"Assets/Images/001/jollof fish.jpg",
         price : 1200 ,
     names :"Jollof Rice",
     desc : "with fish and plantain",
@@ -40,7 +40,7 @@ const menus = [
     },
     {
         id : 3,
-        image :"Assets/Images/001/1201e8a0-079c-4453-82ca-8c44adb8b7bb.jpg",
+        image :"Assets/Images/001/51633bb5-7697-4777-aa70-f36d37893f37.jpg",
         price : 600 ,
     names :"Yam and Beans",
     desc : "with fish and plantain",
@@ -48,7 +48,7 @@ const menus = [
     },
     {
         id : 4,
-        image : "Assets/Images/001/IMG_3307.JPG",
+        image :"Assets/Images/001/ewa agoyin.jpg",
         price : 1300 ,
     names :"Ewa Agoyin",
     desc : "with fish,ponmo and plantain",
@@ -69,6 +69,22 @@ const menus = [
         price : 200 ,
     names :"Coleslaw",
     desc : "Coleslaw",
+    link :"Order Now",
+    },
+    {
+        id : 7,
+        image :"Assets/Images/001/f21fcbdf-7462-4f87-b34e-0db37c9e24a4.jpg",
+        price : 1600 ,
+    names :"Stir Fry Pasta",
+    desc : "with plantain and peppered meat",
+    link :"Order Now",
+    },
+    {
+        id : 8,
+        image :"Assets/Images/001/8d7dc8b2-08a2-4c59-8016-503d101c56da.jpg",
+        price : 1000 ,
+    names :"Yam and Egg Sauce",
+    desc : "Yam and Egg Sauce",
     link :"Order Now",
     },
     
@@ -202,3 +218,45 @@ setInterval(() => {
 }, 3000);
 
 // second page menu ends 
+
+// Notification 
+
+const numberOfPlate = document.getElementById("numberof-plate");
+const phoneNumber = document.getElementById("phone-number");
+const textarea = document.getElementById("textarea");
+const submitMenu = document.querySelector(".submit-menu");
+const notification = document.querySelector(".notification");
+
+function submitBtnfunvtion()  {
+if (numberOfPlate.value ==="") {
+notification.style.display = 'none'
+
+
+ timeout()
+ }
+ else if (phoneNumber.value === "") {
+notification.style.display = 'none'
+
+timeout()
+
+ }
+ else if (textarea.value === "") {
+notification.style.display = 'none'
+timeout()
+
+ }
+ else {
+notification.style.display = 'block'
+numberOfPlate.value = ''
+phoneNumber.value = ''
+textarea.value = ''
+timeout()
+
+ }
+
+}
+function timeout() {
+    setTimeout(function(){
+        notification.style.display = 'none'
+    }, 3000 );
+}

@@ -209,9 +209,20 @@ const firstPageMenu = [
   type : ['breakfast', 'launch', 'brunch', 'drinks' ] 
 
 },
+{
+  id : 8,
+  p : "Yam and Egg Sauce",
+  span : "Yam and Egg Sauce.....................................................<strong>&#8358;1000</strong>",
+  type : ['breakfast', 'launch', 'brunch' ] 
 
+},
+{
+  id : 9,
+  p : "Stir Fry Pasta",
+  span : "with plantain and peppered meat.....................................................<strong>&#8358;1600</strong>",
+  type : ['breakfast', 'launch', 'brunch' ] 
 
-
+},
 ];
 
 

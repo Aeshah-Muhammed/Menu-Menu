@@ -109,6 +109,8 @@
             </div>
           </div>
         </div>
+       
+        
         <!-- <div class="menus">
         <div class="image">
             <img src="Assets/Images/001/IMG_3313.JPG" alt="">
@@ -237,23 +239,26 @@
           Placing your order and Making a reservation at Menu Menu restaurant is
           easy and takes just a couple of minutes
         </h5>
-        <form action="">
+        <form action="mailto:azeezadijat111@gmail.com">
           <input
-            type="number"
+            type="number" id="numberof-plate"
             placeholder="Number of Plate"
             required
           /><br /><br />
-          <input type="date" placeholder="Date" required /><br /><br />
-          <input type="tel" placeholder="Phone No." readonly /><br /><br />
+          <!-- <input type="date" placeholder="Date" required /><br /><br /> -->
+          <input type="tel"  id="phone-number" placeholder="Phone No." required  /><br /><br />
           <textarea
             name=""
-            id=""
+            id="textarea"
             cols="30"
             rows="10"
             placeholder="Message"
             required
           ></textarea>
-          <button type="submit"><a href="mailto:">Send Request</a></button>
+          <div class="notification">
+            <p>"Thanks for patronizing <span><strong>menu-menu</strong></span>, we will have received your orders and will reach you as soon as possible.</p>
+          </div>
+          <button type="submit" class="submit-menu" onclick=submitBtnfunvtion()>Send Request</button>
         </form>
       </div>
       <!-- booking ends  -->
